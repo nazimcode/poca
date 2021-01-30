@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="nazim-Lenovo-G50-70" name="DatabaseTest" tests="1" errors="1" failures="0" skipped="0" time="1.223" timestamp="2021-01-30T15:18:20">
+                     <properties>
+      <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/><property name="java.specification.version" value="11"/><property name="sun.cpu.isalist" value=""/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="java.vendor.url" value="https://ubuntu.com/"/><property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/><property name="sun.java.command" value="/usr/share/sbt/bin/sbt-launch.jar clean coverage test coverageReport"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2020-11-04"/><property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="32-bit"/><property name="line.separator" value="
+"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="11.0.9.1+1-Ubuntu-0ubuntu1.18.04"/><property name="user.name" value="nazim"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="java.io.tmpdir" value="/tmp"/><property name="java.version" value="11.0.9.1"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/><property name="sun.os.patch.level" value="unknown"/><property name="java.library.path" value=":/home/nazim/M2diderot/ing_pro/pragmastudio/bin:/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/><property name="java.vendor" value="Ubuntu"/><property name="scala.ext.dirs" value="/home/nazim/.sbt/0.13/java9-rt-ext-ubuntu_11_0_9_1"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.desktop" value="gnome"/><property name="java.class.path" value="/usr/share/sbt/bin/sbt-launch.jar"/><property name="java.vm.vendor" value="Ubuntu"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="Europe/Paris"/><property name="os.name" value="Linux"/><property name="java.vm.specification.version" value="11"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="FR"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/home/nazim"/><property name="user.language" value="fr"/><property name="swoval.tmpdir" value="/home/nazim/.sbt/1.0"/><property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/><property name="jline.esc.timeout" value="0"/><property name="path.separator" value=":"/><property name="os.version" value="5.4.0-62-generic"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/><property name="user.dir" value="/home/nazim/M2diderot/poca/poca-2020"/><property name="os.arch" value="amd64"/><property name="java.vm.info" value="mixed mode, sharing"/><property name="java.vm.version" value="11.0.9.1+1-Ubuntu-0ubuntu1.18.04"/><property name="java.class.version" value="55.0"/>
+    </properties>
+                     <testcase classname="DatabaseTest" name="(It is not a test it is a sbt.testing.SuiteSelector)" time="1.223">
+                                                 <error message="ERREUR: la relation « database_version » n'existe pas
+  Position : 15" type="org.postgresql.util.PSQLException">org.postgresql.util.PSQLException: ERREUR: la relation « database_version » n'existe pas
+  Position : 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:153)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at slick.jdbc.StatementInvoker.results(StatementInvoker.scala:39)
+	at slick.jdbc.StatementInvoker.iteratorTo(StatementInvoker.scala:22)
+	at slick.jdbc.Invoker.foreach(Invoker.scala:47)
+	at slick.jdbc.Invoker.foreach$(Invoker.scala:46)
+	at slick.jdbc.StatementInvoker.foreach(StatementInvoker.scala:16)
+	at slick.jdbc.StreamingInvokerAction.run(StreamingInvokerAction.scala:22)
+	at slick.jdbc.StreamingInvokerAction.run$(StreamingInvokerAction.scala:20)
+	at slick.jdbc.SQLActionBuilder$$anon$1.run(StaticQuery.scala:95)
+	at slick.jdbc.SQLActionBuilder$$anon$1.run(StaticQuery.scala:95)
+	at slick.basic.BasicBackend$DatabaseDef$$anon$3.liftedTree1$1(BasicBackend.scala:276)
+	at slick.basic.BasicBackend$DatabaseDef$$anon$3.run(BasicBackend.scala:276)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</error>
+                                               </testcase>
+                     <system-out><![CDATA[]]></system-out>
+                     <system-err><![CDATA[]]></system-err>
+                   </testsuite>

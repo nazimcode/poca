@@ -1,0 +1,6 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mRoutesTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Route GET /hello should say hello[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Route GET /signup should returns the signup page[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Route POST /register should create a new user[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Route POST /register should warn the user when username is already taken[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Route GET /users should display the list of users[0m[0m

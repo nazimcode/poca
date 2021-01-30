@@ -1,0 +1,15 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mDatabaseTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDatabaseTest *** ABORTED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  org.postgresql.util.PSQLException: ERREUR: la relation « database_version » n'existe pas[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Position : 15[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:153)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at slick.jdbc.StatementInvoker.results(StatementInvoker.scala:39)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
