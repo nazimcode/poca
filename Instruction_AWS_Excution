@@ -1,0 +1,28 @@
+#How to delpoy our application in the cloud AWS
+
+
+1- Create an acount AWS 
+2- Get Id's from : https://console.aws.amazon.com/iam/home?region=eu-west-3#/security_credentials (clé d'accés)
+3- installation of AWS cli
+4- Do the access to the file ~/.aws/credentials
+enter to the file main.tf we add : 
+
+provider "aws" {
+  shared_credentials_file = "~/.aws/credentials"
+  region = "eu-west-3"  # Europe (Paris)
+}
+
+5- Create a bucket https://s3.console.aws.amazon.com/s3/home?region=eu-west-3
+6- enter the name of the bucket in main.tf
+7- création of dynamoDB https://eu-west-3.console.aws.amazon.com/dynamodb/home
+clé = LockID
+tom de la table : poca-tfstates-locks
+8- changement of @ ip elastic in integration.tfvar 
+https://eu-west-3.console.aws.amazon.com/ec2/v2/home?region=eu-west-3#Addresses:
+9- get ssm id https://console.aws.amazon.com/billing/home?#/account
+replace 182500928202 by your id all places in terraform's reporetry
+10- after the terraform init command replace the xxx in the command : export TF_VAR_db_password="xxx" par mot de passe de 8 caractères de votre choix
+11- after the deployment has been validated to access your application you must recover the ipv4 address of the ec2 instance https://eu-west-3.console.aws.amazon.com/ec2/v2/home?region=eu-west-3#Instances:instanceState=running
+
+
+ 

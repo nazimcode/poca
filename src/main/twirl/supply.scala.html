@@ -1,0 +1,20 @@
+@()
+
+
+<div>
+    <h1>Ajouter produit</h1>
+
+    <form action=/api/add_stock method="post">
+        <label for="name">name :</label><br>
+        <input type="text" name="name"></input><br>
+        <label for="description">description :</label><br>
+        <input type="text" name="description"></input><br>
+        <label for="url">image URL :</label><br>
+        <input type="text" name="image"></input><br>
+        <label for="price" value="prix">prix :</label><br>
+        <input type="number" name="price"></input><br>
+        <label for="quantity">quantiter :</label><br>
+        <input type="number" name="quantity"></input><br>
+        <input type="submit" value="Envoyer">
+    </form>
+</div>

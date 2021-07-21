@@ -1,0 +1,25 @@
+@(products: Seq[poca.Product])
+
+
+
+<div class="market">
+    <h1>Bienvenu a l'espace livre</h1>
+
+    <ul >
+        
+        @for(product <- products) { <li >
+                <a href="/product?productId=@product.id">
+                    <h3>Nom: @product.name</h3>
+                </a>
+                <p>Description: @product.description</p>
+                @defining(product.imageLinks.split(';')(0)) { image =>
+                    @if(image != "") {
+                        <a href="/product?productId=@product.id">
+                            <img src="@image" alt⁼"@product.name" />
+                        </a>
+                    }
+                }
+                </li>
+            }
+    </ul>
+</div>

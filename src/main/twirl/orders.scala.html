@@ -1,0 +1,33 @@
+@(items: List[List[(poca.OrderUser,poca.Product)]])
+
+
+<div class="order">
+    <h1>Commandes</h1>
+    <div>
+        <ul>
+            @for(item <- items) { <li>
+                <p>Date : @item(0)._1.date.toString.dropRight(13) </p>
+                <ul>
+                    @for(tuple <-item){ <li>
+                        <a href="/product?productId=@tuple._1.productId">
+                            <h3>@tuple._2.name</h3>
+                        </a>
+
+                        @defining(tuple._2.imageLinks.split(';')(0)) { image =>
+                        @if(image != "") {
+                        <a href="/product?productId=@tuple._2.id">
+                            <img src="@image" class="basketImage" alt⁼"@tuple._2.name" />
+                        </a>
+                        }
+                        }
+                        <p>Quantity : @tuple._1.quantity</p>
+                        <p>Seller : @tuple._1.seller.username</p>
+                        <p>Status : @tuple._1.status</p>
+                        </li>
+                        }
+                </ul>
+                </li>
+                }
+        </ul>
+    </div>
+</div>

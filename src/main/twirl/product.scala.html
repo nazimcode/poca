@@ -1,0 +1,33 @@
+@(product : poca.Product, user : String)
+
+
+<div class="product">
+  <h1>@(product.name)</h1>
+  
+
+  
+  <div class="product-description">
+    <div id="images">
+      @for(image <- product.imageLinks.split(';')) { 
+      <img src="@image" alt⁼"@product.name" />
+      }
+    </div>
+    <p>@product.description
+      <br/>
+      <br/>
+      Vendu par : @user
+      <br/>
+      <br/>
+      Prix : @product.price $
+    </p>
+    @if((product.quantity)>0){
+      
+      <form action=/api/add_basket method="post">
+        <input name="id" type="hidden" value="@(product.id)"></input>
+        <button type="submit" value="Ajout au panier">Ajout au panier</button>
+      </form>
+    } else {
+      <label class="out_of_stock">Désoler se produits n'est pas disponnible.</label>
+    }
+  </div>
+</div>

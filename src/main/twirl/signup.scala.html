@@ -1,0 +1,29 @@
+@()
+
+<div class="forms">
+	<head>
+		<script>
+		function validateForm() {
+		  var x = document.forms["signup"]["username"].value;
+		  if (x == "" || x == null) {
+		    alert("Le Pseudo ne peut pas être vide");
+		    return false;
+		  }
+		}
+		</script>
+	</head>
+
+	<h1>Créer votre compte</h1>
+
+    	<p>Bienvenu dans notre application de l'équipe Goodfellow</p>
+
+	<form name="signup" action=/api/register method="post" onsubmit="return validateForm()">
+		<label for="email">Adresse mail :</label><br>
+		<input type="email" class="field" name="email"></input><br>
+		<label for="username">Pseudo :</label><br>
+		<input type="text" class="field" name="username"></input><br>
+		<label for="password"></label>Mot de passe :<br>
+		<input type="password" class="field" name="password"></input><br>
+		<input type="submit" value="Créer">
+	</form>
+</div>

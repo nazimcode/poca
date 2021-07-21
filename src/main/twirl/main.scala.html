@@ -1,0 +1,47 @@
+@(title: String, content: Html)
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Goodfellow</title>
+    <link rel="stylesheet" href="/public/stylesheets/main.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+    <script>
+      $(document).ready(function () {
+            $.get("/api/current_login", {},
+                  function (data) {
+		      if (data != "") {
+			  $("#nav-ul").append(`<li><a href="/profile?userId=${data}">Profile</a></li>`);
+			  $("#nav-ul").append(`<li><a href="/api/do_logout">Deconnexion</a/<</li>`);
+		      } else {
+                $("#nav-ul").append(
+                    `<li><a href="/signin">Connection</a></li>`,
+                    `<li><a href="/signup">Enregistrement</a></li>`
+                );
+              }
+                }).fail(function () {
+                $("#nav-ul").append(
+                    `<li><a href="/signin">Connection</a></li>`,
+                    `<li><a href="/signup">Enregistrement</a></li>`
+                );
+            });
+        });
+    </script>
+    <nav>
+        <ul id="nav-ul">
+            <li><a href="/products"> Les Produits</a></li>
+            <li><a href="/basket">Mon espace d'achat</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    @content
+</body>
+
+</html>
